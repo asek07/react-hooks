@@ -13,20 +13,9 @@ const GitUser = () => {
       data = await response.json();
       return data;
     }
-   
   }
 
-  // useEffect(() => {
-  //   getData().then(data => setUserData(data));
-
-  //   return () => {
-
-  //   }
-   
-  // }, [])
-
   const updateSearch = event => {
-   
     if(event.target.value == "") {
       setUserFound(false);
       setUserData(null);
@@ -53,14 +42,13 @@ const GitUser = () => {
 
       {userFound && (
         <div>
-        <img src={userData.avatar_url} height={50}/>
-        <h3>{userData.login}</h3>
-        <h4>{userData.location}</h4>
+          <img src={userData.avatar_url} height={50}/>
+          <h3>{userData.login}</h3>
+          <h4>{userData.location}</h4>
       </div>
       )}
     </div>
   )
-
 }
 
 export default GitUser;
